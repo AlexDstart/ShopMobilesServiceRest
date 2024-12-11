@@ -11,11 +11,14 @@ import ru.alexdstart.shopmobilesservicerest.service.ShopService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/shops")
-@AllArgsConstructor
+@RequestMapping("/api/shops")
 public class ShopController {
 
     private ShopService shopService;
+
+    public ShopController(ShopService shopService) {
+        this.shopService = shopService;
+    }
 
     @PostMapping("/new")
     public ResponseEntity<Shop> newShop(@RequestBody Shop shop) {
