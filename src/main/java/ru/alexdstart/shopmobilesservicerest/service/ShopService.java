@@ -1,6 +1,5 @@
 package ru.alexdstart.shopmobilesservicerest.service;
 
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.alexdstart.shopmobilesservicerest.entity.Shop;
 import ru.alexdstart.shopmobilesservicerest.repository.ShopRepository;
@@ -22,4 +21,6 @@ public class ShopService {
     public List<Shop> getAllShops() {
         return shopRepository.findAll();
     }
+
 }
+
